@@ -33,8 +33,20 @@ var DATABASE = `
 
 Cardiac Computed Tomography Angiography
   TAGS : photo
-  DATE : 2019-05-15
+  DATE : 2023-08-01
   TYPE : image
   FILE : CTA.png
+  DONE : true
+
+White Jazz
+  TYPE : quote
+  DATE : 2023-07-30
+  TAGS : excerpt
+  QOTE
+    > All I have is the will to remember.
+    & Time revoked/fever dreams——
+    & I wake up reaching, afraid I'll forget.
+    & Pictures keep the woman young.
+  FROM : James Ellroy
   DONE : true
 `
