@@ -8,7 +8,7 @@ var DATABASE = `
 恶作剧
   TYPE : quote
   DATE : 2023-09-08
-  TAGS : literature
+  TAGS : excerpt
   QOTE : 对于我喜爱的诗人，不管其写作立场是否敌对，我也会在书架上将他们紧紧地并排摆放在一起。
   FROM : 秦晓宇《七零诗话》
   DONE : true
@@ -16,8 +16,25 @@ var DATABASE = `
 我如何写作
   TYPE : quote
   DATE : 2023-07-30
-  TAGS : literature
+  TAGS : excerpt
   QOTE : 这个世界必须尽可能地精确，以便我能怀着十足的自信在其中自由来去。
   FROM : 埃科《埃科谈文学》
+  DONE : true
+
+战地之雨
+  TYPE : quote
+  DATE : 2023-09-09
+  TAGS : poem
+  QOTE
+    > 雨水洒落在我朋友的脸上
+    & 雨水洒落在我活着的朋友的脸上
+  FROM : 阿米亥
+  DONE : true
+
+Cardiac Computed Tomography Angiography
+  TAGS : photo
+  DATE : 2019-05-15
+  TYPE : image
+  FILE : CTA.png
   DONE : true
 `
