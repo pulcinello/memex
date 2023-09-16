@@ -13,14 +13,14 @@ class Theme {
         b_med: "#214c05",
         b_low: "#48413a",
       },
-      soyuz: {
-        background: "#111",
+      night: {
+        background: "#26232b",
         f_high: "#fff",
-        f_med: "#aaa",
-        f_low: "#555",
-        b_high: "#fc533e",
-        b_med: "#666",
-        b_low: "#333",
+        f_med: "#b21e41",
+        f_low: "#3e3d42",
+        b_high: "#bdbcc1",
+        b_med: "#63606b",
+        b_low: "#1c1b1f",
       },
     };
     let date = new Date();
@@ -28,7 +28,7 @@ class Theme {
     if (hour >= 6 && hour <= 18) {
       this.active = this.palettes.garden;
     } else {
-      this.active = this.palettes.soyuz;
+      this.active = this.palettes.night;
     }
   }
   apply(theme) {

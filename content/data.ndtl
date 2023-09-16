@@ -1,6 +1,5 @@
 var DATABASE = `
 설리
-  TAGS : photo
   DATE : 2019-05-15
   TYPE : image
   FILE : sulli.png
@@ -27,12 +26,11 @@ var DATABASE = `
   TAGS : poem
   QOTE
     > 雨水洒落在我朋友的脸上
-    & 雨水洒落在我活着的朋友的脸上
+    & &nbsp&nbsp&nbsp雨水洒落在我活着的朋友的脸上
   FROM : 阿米亥
   DONE : true
 
 Cardiac Computed Tomography Angiography
-  TAGS : photo
   DATE : 2023-08-01
   TYPE : image
   FILE : CTA.png
