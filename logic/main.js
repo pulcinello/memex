@@ -11,7 +11,6 @@ function Main() {
   this.queryPrev = "";
   this.queryPrevAdd = "";
   this.articlesDisplayed = 0;
-  var parent = this;
 
   this.install = function () {
     seer.note("load all js files");
@@ -108,4 +107,3 @@ function Main() {
 window.addEventListener("hashchange", function () {
   main.load();
 });
-

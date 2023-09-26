@@ -10,7 +10,6 @@ var DATABASE = `
   TAGS : excerpt
   QOTE : 对于我喜爱的诗人，不管其写作立场是否敌对，我也会在书架上将他们紧紧地并排摆放在一起。
   FROM : 秦晓宇《七零诗话》
-  DONE : true
 
 我如何写作
   TYPE : quote
@@ -18,7 +17,6 @@ var DATABASE = `
   TAGS : excerpt
   QOTE : 这个世界必须尽可能地精确，以便我能怀着十足的自信在其中自由来去。
   FROM : 埃科《埃科谈文学》
-  DONE : true
 
 战地之雨
   TYPE : quote
@@ -28,13 +26,11 @@ var DATABASE = `
     > 雨水洒落在我朋友的脸上
     & &nbsp&nbsp&nbsp雨水洒落在我活着的朋友的脸上
   FROM : 阿米亥
-  DONE : true
 
 Cardiac Computed Tomography Angiography
   DATE : 2023-08-01
   TYPE : image
   FILE : CTA.png
-  DONE : true
 
 White Jazz
   TYPE : quote
@@ -46,5 +42,4 @@ White Jazz
     & I wake up reaching, afraid I'll forget.
     & Pictures keep the woman young.
   FROM : James Ellroy
-  DONE : true
 `

@@ -20,7 +20,7 @@
 
   --alpha-darken: 0.6;
   --alpha-idleicon: 0.2;
-  --alpha-idle: 0.4;
+  --alpha-idle: 0.8;
   --alpha-enabledicon: 0.4;
   --alpha-enabled: 1;
   --alpha-ascent: 1;
@@ -94,6 +94,7 @@ a:focus {
   animation: loading-wave 1.5s infinite;
   transition-timing-function: ease-in-out;
   -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 .loading-wave div:nth-child(1) {
   left: 0px;
@@ -194,7 +195,6 @@ nav::-webkit-scrollbar {
 }
 .nav-itemcount {
   padding-right: calc(var(--size-menu-item-seph) / 2);
-  display: inline-block;
   text-align: right;
   float: left;
   width: 50%;
@@ -203,7 +203,6 @@ nav::-webkit-scrollbar {
   margin-left: calc(var(--size-menu-item-seph) / 2);
   margin-top: calc(var(--size-font-bodytypes) / 10);
   width: calc(var(--size-font-bodytypes) * 1.25);
-  display: inline-block;
   text-align: center;
   float: left;
 }
@@ -406,10 +405,21 @@ article:hover .article-containerlower-image {
 .article-image .article-title {
   display: none;
 }
-.article-image:hover .article-title {
-  display: initial;
-  text-shadow: 0 0 3em #000;
-  color: white;
+
+.article-containerupper-image > header {
+  color: #fefefe;
+}
+
+.article-containerlower-image .article-rowtext {
+  color: #fefefe;
+}
+
+.article-containerlower-image .article-file-link {
+  color: #fefefe;
+}
+
+article:hover .article-containerlower-image .textIcon {
+  color: #fefefe;
 }
 
 /* LINK */
@@ -423,7 +433,6 @@ article:hover .article-containerlower-image {
   float: left;
   clear: both;
   text-decoration: none;
-  display: inline-block;
 }
 
 .article-linktitle {
@@ -556,7 +565,6 @@ article:hover .article-taglink:hover {
 
 /* SMALL ICONS */
 .textIcon {
-  color: #fff;
   margin-right: var(--size-item-elem-sep);
 }
 article:hover .textIcon {

@@ -1,13 +1,42 @@
-function Indental(data) {
-  this.data = data;
+"use strict";
 
-  this.parse = function (type) {
-    var lines = this.data.split("\n").map(liner);
+class Indental {
+  constructor(data) {
+    this.data = data;
+  }
+
+  liner(line) {
+    return {
+      indent: line.search(/\S|$/),
+      content: line.trim(),
+      skip: line == "" || line[0] == "~",
+      key: line.indexOf(" : ") !== -1 ? line.split(" : ")[0].trim() : null,
+      value: line.indexOf(" : ") !== -1 ? line.split(" : ")[1].trim() : null,
+      children: [],
+    };
+  }
+
+  format(line) {
+    let a = [];
+    let h = {};
+    for (const child of line.children) {
+      if (child.key) {
+        h[child.key.toUpperCase()] = child.value;
+      } else if (child.children.length === 0 && child.content) {
+        a.push(child.content);
+      } else {
+        h[child.content.toUpperCase()] = this.format(child);
+      }
+    }
+    return a.length > 0 ? a : h;
+  }
+
+  parse(type) {
+    let lines = this.data.split("\n").map(this.liner);
     // Assoc lines
-    var stack = {};
-    var target = lines[0];
-    for (id in lines) {
-      var line = lines[id];
+    let stack = {};
+    let target = lines[0];
+    for (const line of lines) {
       if (line.skip) {
         continue;
       }
@@ -19,43 +48,14 @@ function Indental(data) {
     }
 
     // Format
-    var h = {};
-    for (id in lines) {
-      var line = lines[id];
+    let h = {};
+    for (const line of lines) {
       if (line.skip || line.indent > 0) {
         continue;
       }
-      var key = line.content.toUpperCase();
-      h[key] = type ? new type(key, format(line)) : format(line);
+      let key = line.content.toUpperCase();
+      h[key] = type ? new type(key, this.format(line)) : this.format(line);
     }
     return h;
-  };
-
-  function format(line) {
-    var a = [];
-    var h = {};
-    for (id in line.children) {
-      var child = line.children[id];
-      if (child.key) {
-        h[child.key.toUpperCase()] = child.value;
-      } else if (child.children.length == 0 && child.content) {
-        a.push(child.content);
-      } else {
-        h[child.content.toUpperCase()] = format(child);
-      }
-    }
-    return a.length > 0 ? a : h;
-  }
-
-  function liner(line) {
-    return {
-      indent: line.search(/\S|$/),
-      content: line.trim(),
-      skip: line == "" || line.substr(0, 1) == "~",
-      key: line.indexOf(" : ") > -1 ? line.split(" : ")[0].trim() : null,
-      value: line.indexOf(" : ") > -1 ? line.split(" : ")[1].trim() : null,
-      children: [],
-    };
   }
 }
-
