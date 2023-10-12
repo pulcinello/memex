@@ -57,6 +57,12 @@ html {
   padding: 0em;
   margin: 0;
   overflow-y: scroll;
+  background: var(--color-bg);
+  background-image: radial-gradient(
+    var(--color-menu) 0.75px,
+    transparent 0.75px
+  );
+  background-size: 15px 15px;
 }
 body {
   padding: 0em;
@@ -157,7 +163,6 @@ a:focus {
 /* NAV */
 nav {
   padding-top: var(--size-grid-gutter);
-  background: var(--color-bg);
   opacity: var(--alpha-idle);
   width: var(--size-menu);
   position: fixed;
@@ -167,6 +172,7 @@ nav {
   top: 0px;
   /*overflow-y: scroll;*/ /*allow menu to scroll on small screens*/
 }
+
 nav:hover {
   opacity: var(--alpha-ascent);
 }
@@ -253,7 +259,6 @@ nav::-webkit-scrollbar {
 
 /* MAIN */
 .container {
-  background: var(--background);
   margin-left: calc(var(--size-menu) + var(--size-grid-gutter));
   margin-right: var(--size-grid-gutter);
 }

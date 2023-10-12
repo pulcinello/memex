@@ -7,9 +7,9 @@ class Theme {
       day: {
         background: "#d9ccc8",
         f_high: "#2b2b2b",
-        f_med: "#0e2954",
+        f_med: "#2b302b",
         f_low: "#a3832c",
-        b_high: "#aa0000",
+        b_high: "#ad4b3d",
         b_med: "#214c05",
         b_low: "#c8b7a6",
       },
