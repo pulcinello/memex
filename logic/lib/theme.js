@@ -23,13 +23,14 @@ class Theme {
         b_low: "#1c1b1f",
       },
     };
-    let date = new Date();
-    let hour = date.getHours();
-    if (hour >= 6 && hour <= 18) {
-      this.active = this.palettes.day;
-    } else {
-      this.active = this.palettes.night;
-    }
+    this.active = this.palettes.night;
+    // let date = new Date();
+    // let hour = date.getHours();
+    // if (hour >= 6 && hour <= 18) {
+    //   this.active = this.palettes.day;
+    // } else {
+    //   this.active = this.palettes.night;
+    // }
   }
   apply(theme) {
     this.el.innerHTML = `
